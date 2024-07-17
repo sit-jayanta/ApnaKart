@@ -1,0 +1,941 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* ApnaKartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ApnaKartTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-ApnaKart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ApnaKart.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		7699B88040F8A987B510C191 /* libPods-ApnaKart-ApnaKartTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ApnaKart-ApnaKartTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		2364FC2D16B54695B28B4517 /* apps.png in Resources */ = {isa = PBXBuildFile; fileRef = A79BD138BFD24D019B41541C /* apps.png */; };
+		7671BDC68CA1412D84CE7D98 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F77657FF08024555B387E73E /* home.png */; };
+		B36F8F20F507486695CB02CB /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AE5A496E7842A69BC551D3 /* profile.png */; };
+		C379A8A3A6824BD298D8F348 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = D52BD798680447488BBAF245 /* search.png */; };
+		9529C8EC7D674F1689C1D898 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 897DB319EA45434E84187621 /* settings.png */; };
+		CCA74CA623704EBBA4AAE473 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 779D54108E914D839778EFB1 /* facebook.png */; };
+		699BCB052063476FA07EF7E7 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D3EE7B61B79465DBF852CE5 /* google.png */; };
+		141C3E70BCD34726AD070930 /* arrow.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1582522F78D543EFAC0F262E /* arrow.svg */; };
+		616AB92F640447239F60DE62 /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = 0191313813CB4984AA8E6321 /* go.png */; };
+		4BA4B18216AC44D39B30AADF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A366E21A054A40D6B01529BB /* icon.png */; };
+		9C1DF7F4D23E48B39718481A /* search.svg in Resources */ = {isa = PBXBuildFile; fileRef = EBB78B4FF99F45559208D0E8 /* search.svg */; };
+		569577AA7F6044B69EDEBA32 /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9E698AF773FA48BFB3963B16 /* profile.jpeg */; };
+		B52B301107DF4F6D8099AAD1 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6F588E8380F4393AF5D0EE3 /* Urbanist-Bold.ttf */; };
+		5BAF09C0783C4E4A8F943808 /* Urbanist-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 595A4B2C39FB447095EE24FB /* Urbanist-BoldItalic.ttf */; };
+		22209AF1A15946DC88997264 /* Urbanist-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59EB475BFC7C48639B70EACC /* Urbanist-ExtraBold.ttf */; };
+		CBDA91EB1AE94DB5850B54F4 /* Urbanist-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 678BA97D10C6462C8F9B6D21 /* Urbanist-ExtraBoldItalic.ttf */; };
+		5BA91E963F184532B9BA68A2 /* Urbanist-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB89892F9A4D417FB3666401 /* Urbanist-ExtraLight.ttf */; };
+		229148592C3B42A199FDDE5E /* Urbanist-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06763E083C17444391245884 /* Urbanist-ExtraLightItalic.ttf */; };
+		8EA3945C98EC45E9BCA82DF2 /* Urbanist-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FD5081C0152487C931A01EE /* Urbanist-Italic.ttf */; };
+		1B9EECE58A1F4393B49C3A56 /* Urbanist-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0C2241FE95646B9AB2511A1 /* Urbanist-Light.ttf */; };
+		80183A96BE48436D9B6A22DD /* Urbanist-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D5E815C6E474DCAAAACD31E /* Urbanist-LightItalic.ttf */; };
+		E885DC20B5D64A89A11082C1 /* Urbanist-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE6CA07E713D48FB8E2D8716 /* Urbanist-Medium.ttf */; };
+		8060D4BAD06049BFB3AD0297 /* Urbanist-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4706935C7B4E44779FB1260D /* Urbanist-MediumItalic.ttf */; };
+		261454E3CA524DC7899FD6E0 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB2C92D5A8E44D46B971F915 /* Urbanist-Regular.ttf */; };
+		0294B9F1DE8B492CBD9007CA /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E467EC65042D4FD4B8B6F25C /* Urbanist-SemiBold.ttf */; };
+		9C55D213CAC742C3A27415D3 /* Urbanist-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6805C8B6916E43B8A16A18BA /* Urbanist-SemiBoldItalic.ttf */; };
+		7EE47E50EA8C4A6A88E99203 /* Urbanist-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF4516C740034A6F969B5C4E /* Urbanist-Thin.ttf */; };
+		2F132083D5694FCD97117AEE /* Urbanist-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916F52A48A7045A0836AAF82 /* Urbanist-ThinItalic.ttf */; };
+		A57934197E344E2C872EFBF7 /* bag.png in Resources */ = {isa = PBXBuildFile; fileRef = E5EC16EEDFA24074B40D686D /* bag.png */; };
+		8B49D5B84E284759914C959A /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E9031BED454C34A8C36F0B /* heart.png */; };
+		8180D65F5F094961A660905D /* accesories.png in Resources */ = {isa = PBXBuildFile; fileRef = C6DBFF89D16C4B27826A00BC /* accesories.png */; };
+		87672C0419634AEFAC79D20C /* clothes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D5D1B2E5BA449CD869BF3EE /* clothes.jpg */; };
+		CF416DA0836246CA9EA1B6ED /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = EACF8AC42A7946E0B1F7B625 /* arrow_down.png */; };
+		6932C05F1FB444569E6426DA /* like_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B0FA83B001C47DEB2254D1C /* like_filled.png */; };
+		6A3354E589864CD2A13811C4 /* like_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 4080E15BD54A41BAA814F421 /* like_outline.png */; };
+		7E8048ECB36C4873BD8F8483 /* rating_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BFB0D953AC1427D9F9B5FA0 /* rating_empty.png */; };
+		7531A5E3F5884976967DB2FD /* rating_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 85EEF78A657B4866A573AB7A /* rating_filled.png */; };
+		97062904ED174518ACB0767B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A9DF767A524EF6AD591D24 /* star.png */; };
+		5B0C92DFD456412B84885670 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F38C30E569C42BB9012D42C /* add.png */; };
+		13FEA8243E3C42B69E16983E /* casualshirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48FC99D6A760463BAA287DA7 /* casualshirt.jpg */; };
+		1EB2D98D83474D348A18BCF9 /* dress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4156991A58A24A4693A5DA02 /* dress.jpg */; };
+		EC73E7F5BCF243C0BD8B8C1B /* eyewear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62B02137BF7A4C4887283243 /* eyewear.jpg */; };
+		520226BEA911431AB9519798 /* fashionsale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2926660FA49E4A20A5D54FF9 /* fashionsale.jpg */; };
+		B52C9D7CDA254997A0DA8280 /* fomalshirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8915FC28A7F047F0BDED868D /* fomalshirt.jpg */; };
+		64AC65DB06EA4E8CBED83C75 /* frock.png in Resources */ = {isa = PBXBuildFile; fileRef = A7A3A313EB5B4057B6016C52 /* frock.png */; };
+		639F080C397645239340B30B /* gowns.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFC084894E845D6ADE239F1 /* gowns.jpg */; };
+		48511EB808FE4BACBAF18507 /* hoody.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CE888A7DF584C3B93EF3EFF /* hoody.jpg */; };
+		9855379F94C046B1B57C5602 /* itembanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 1430053D9D63499FBBFA6EA5 /* itembanner.png */; };
+		2F47C5997F814D588CC8E299 /* jeans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9331890EED14021BBB23962 /* jeans.jpg */; };
+		97EE52BDE66A47BE97C87158 /* kidsjeans.png in Resources */ = {isa = PBXBuildFile; fileRef = D792F1D7AE3A47AA97FBD501 /* kidsjeans.png */; };
+		23F848CF03DE4EEBB86063D0 /* kidsshirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E0706371A413F86E17EF2 /* kidsshirt.png */; };
+		417485DA61B94540BA2CB289 /* kidstshirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 647A3D426DE64CBEB3A5159E /* kidstshirt.png */; };
+		470E5BEECDD24A68AC3BE976 /* kurti.png in Resources */ = {isa = PBXBuildFile; fileRef = 5165288BC210421DB1A58772 /* kurti.png */; };
+		757E1595EE154EF8A4F86836 /* lehenga.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D20277F66B4622B8376240 /* lehenga.png */; };
+		A5EE5688170C4DFDB826041F /* mentshirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ABAA873D4F1D41D5A8BC54DB /* mentshirt.jpg */; };
+		6003AC1162084694B325FAC0 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = E86429A08BB84EC49B9C8433 /* minus.png */; };
+		E56FB0F825214907B2DF7B63 /* saree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 672A5F32DB0749E0B4E50850 /* saree.jpg */; };
+		3EAE8BC93C1343509A71A210 /* shoess.png in Resources */ = {isa = PBXBuildFile; fileRef = 4462577294434108B1095C47 /* shoess.png */; };
+		947774E186F148C6AEA8FB9B /* trousers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC300B448F5F4A7196D680A3 /* trousers.jpg */; };
+		35D355A3343449A29B8AF09B /* ImageAssets.js in Resources */ = {isa = PBXBuildFile; fileRef = FF1390B9F19342318492ADF3 /* ImageAssets.js */; };
+		3FA882F7801E40E0B96D34C1 /* neww.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91152502447F4E09AAF34D3F /* neww.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = ApnaKart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* ApnaKartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApnaKartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ApnaKartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApnaKartTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ApnaKart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApnaKart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ApnaKart/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ApnaKart/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ApnaKart/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ApnaKart/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ApnaKart/main.m; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = ApnaKart/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ApnaKart-ApnaKartTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApnaKart-ApnaKartTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-ApnaKart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApnaKart.debug.xcconfig"; path = "Target Support Files/Pods-ApnaKart/Pods-ApnaKart.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-ApnaKart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApnaKart.release.xcconfig"; path = "Target Support Files/Pods-ApnaKart/Pods-ApnaKart.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-ApnaKart-ApnaKartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApnaKart-ApnaKartTests.debug.xcconfig"; path = "Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-ApnaKart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApnaKart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ApnaKart/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-ApnaKart-ApnaKartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApnaKart-ApnaKartTests.release.xcconfig"; path = "Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A79BD138BFD24D019B41541C /* apps.png */ = {isa = PBXFileReference; name = "apps.png"; path = "../assets/fonts/icons/apps.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F77657FF08024555B387E73E /* home.png */ = {isa = PBXFileReference; name = "home.png"; path = "../assets/fonts/icons/home.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8AE5A496E7842A69BC551D3 /* profile.png */ = {isa = PBXFileReference; name = "profile.png"; path = "../assets/fonts/icons/profile.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D52BD798680447488BBAF245 /* search.png */ = {isa = PBXFileReference; name = "search.png"; path = "../assets/fonts/icons/search.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		897DB319EA45434E84187621 /* settings.png */ = {isa = PBXFileReference; name = "settings.png"; path = "../assets/fonts/icons/settings.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		779D54108E914D839778EFB1 /* facebook.png */ = {isa = PBXFileReference; name = "facebook.png"; path = "../assets/fonts/images/facebook.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3D3EE7B61B79465DBF852CE5 /* google.png */ = {isa = PBXFileReference; name = "google.png"; path = "../assets/fonts/images/google.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1582522F78D543EFAC0F262E /* arrow.svg */ = {isa = PBXFileReference; name = "arrow.svg"; path = "../assets/fonts/icons/arrow.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0191313813CB4984AA8E6321 /* go.png */ = {isa = PBXFileReference; name = "go.png"; path = "../assets/fonts/icons/go.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A366E21A054A40D6B01529BB /* icon.png */ = {isa = PBXFileReference; name = "icon.png"; path = "../assets/fonts/icons/icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EBB78B4FF99F45559208D0E8 /* search.svg */ = {isa = PBXFileReference; name = "search.svg"; path = "../assets/fonts/icons/search.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9E698AF773FA48BFB3963B16 /* profile.jpeg */ = {isa = PBXFileReference; name = "profile.jpeg"; path = "../assets/fonts/images/profile.jpeg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6F588E8380F4393AF5D0EE3 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; name = "Urbanist-Bold.ttf"; path = "../assets/fonts/Urbanist-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		595A4B2C39FB447095EE24FB /* Urbanist-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Urbanist-BoldItalic.ttf"; path = "../assets/fonts/Urbanist-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		59EB475BFC7C48639B70EACC /* Urbanist-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Urbanist-ExtraBold.ttf"; path = "../assets/fonts/Urbanist-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		678BA97D10C6462C8F9B6D21 /* Urbanist-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Urbanist-ExtraBoldItalic.ttf"; path = "../assets/fonts/Urbanist-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DB89892F9A4D417FB3666401 /* Urbanist-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Urbanist-ExtraLight.ttf"; path = "../assets/fonts/Urbanist-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		06763E083C17444391245884 /* Urbanist-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "Urbanist-ExtraLightItalic.ttf"; path = "../assets/fonts/Urbanist-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5FD5081C0152487C931A01EE /* Urbanist-Italic.ttf */ = {isa = PBXFileReference; name = "Urbanist-Italic.ttf"; path = "../assets/fonts/Urbanist-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0C2241FE95646B9AB2511A1 /* Urbanist-Light.ttf */ = {isa = PBXFileReference; name = "Urbanist-Light.ttf"; path = "../assets/fonts/Urbanist-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3D5E815C6E474DCAAAACD31E /* Urbanist-LightItalic.ttf */ = {isa = PBXFileReference; name = "Urbanist-LightItalic.ttf"; path = "../assets/fonts/Urbanist-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE6CA07E713D48FB8E2D8716 /* Urbanist-Medium.ttf */ = {isa = PBXFileReference; name = "Urbanist-Medium.ttf"; path = "../assets/fonts/Urbanist-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4706935C7B4E44779FB1260D /* Urbanist-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Urbanist-MediumItalic.ttf"; path = "../assets/fonts/Urbanist-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB2C92D5A8E44D46B971F915 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; name = "Urbanist-Regular.ttf"; path = "../assets/fonts/Urbanist-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E467EC65042D4FD4B8B6F25C /* Urbanist-SemiBold.ttf */ = {isa = PBXFileReference; name = "Urbanist-SemiBold.ttf"; path = "../assets/fonts/Urbanist-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6805C8B6916E43B8A16A18BA /* Urbanist-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Urbanist-SemiBoldItalic.ttf"; path = "../assets/fonts/Urbanist-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CF4516C740034A6F969B5C4E /* Urbanist-Thin.ttf */ = {isa = PBXFileReference; name = "Urbanist-Thin.ttf"; path = "../assets/fonts/Urbanist-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		916F52A48A7045A0836AAF82 /* Urbanist-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Urbanist-ThinItalic.ttf"; path = "../assets/fonts/Urbanist-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E5EC16EEDFA24074B40D686D /* bag.png */ = {isa = PBXFileReference; name = "bag.png"; path = "../assets/fonts/icons/bag.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F3E9031BED454C34A8C36F0B /* heart.png */ = {isa = PBXFileReference; name = "heart.png"; path = "../assets/fonts/icons/heart.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C6DBFF89D16C4B27826A00BC /* accesories.png */ = {isa = PBXFileReference; name = "accesories.png"; path = "../assets/fonts/images/accesories.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1D5D1B2E5BA449CD869BF3EE /* clothes.jpg */ = {isa = PBXFileReference; name = "clothes.jpg"; path = "../assets/fonts/images/clothes.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EACF8AC42A7946E0B1F7B625 /* arrow_down.png */ = {isa = PBXFileReference; name = "arrow_down.png"; path = "../assets/fonts/icons/arrow_down.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7B0FA83B001C47DEB2254D1C /* like_filled.png */ = {isa = PBXFileReference; name = "like_filled.png"; path = "../assets/fonts/icons/like_filled.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4080E15BD54A41BAA814F421 /* like_outline.png */ = {isa = PBXFileReference; name = "like_outline.png"; path = "../assets/fonts/icons/like_outline.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1BFB0D953AC1427D9F9B5FA0 /* rating_empty.png */ = {isa = PBXFileReference; name = "rating_empty.png"; path = "../assets/fonts/icons/rating_empty.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		85EEF78A657B4866A573AB7A /* rating_filled.png */ = {isa = PBXFileReference; name = "rating_filled.png"; path = "../assets/fonts/icons/rating_filled.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C1A9DF767A524EF6AD591D24 /* star.png */ = {isa = PBXFileReference; name = "star.png"; path = "../assets/fonts/icons/star.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8F38C30E569C42BB9012D42C /* add.png */ = {isa = PBXFileReference; name = "add.png"; path = "../assets/fonts/images/add.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		48FC99D6A760463BAA287DA7 /* casualshirt.jpg */ = {isa = PBXFileReference; name = "casualshirt.jpg"; path = "../assets/fonts/images/casualshirt.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4156991A58A24A4693A5DA02 /* dress.jpg */ = {isa = PBXFileReference; name = "dress.jpg"; path = "../assets/fonts/images/dress.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		62B02137BF7A4C4887283243 /* eyewear.jpg */ = {isa = PBXFileReference; name = "eyewear.jpg"; path = "../assets/fonts/images/eyewear.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2926660FA49E4A20A5D54FF9 /* fashionsale.jpg */ = {isa = PBXFileReference; name = "fashionsale.jpg"; path = "../assets/fonts/images/fashionsale.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8915FC28A7F047F0BDED868D /* fomalshirt.jpg */ = {isa = PBXFileReference; name = "fomalshirt.jpg"; path = "../assets/fonts/images/fomalshirt.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A7A3A313EB5B4057B6016C52 /* frock.png */ = {isa = PBXFileReference; name = "frock.png"; path = "../assets/fonts/images/frock.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0AFC084894E845D6ADE239F1 /* gowns.jpg */ = {isa = PBXFileReference; name = "gowns.jpg"; path = "../assets/fonts/images/gowns.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3CE888A7DF584C3B93EF3EFF /* hoody.jpg */ = {isa = PBXFileReference; name = "hoody.jpg"; path = "../assets/fonts/images/hoody.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1430053D9D63499FBBFA6EA5 /* itembanner.png */ = {isa = PBXFileReference; name = "itembanner.png"; path = "../assets/fonts/images/itembanner.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A9331890EED14021BBB23962 /* jeans.jpg */ = {isa = PBXFileReference; name = "jeans.jpg"; path = "../assets/fonts/images/jeans.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D792F1D7AE3A47AA97FBD501 /* kidsjeans.png */ = {isa = PBXFileReference; name = "kidsjeans.png"; path = "../assets/fonts/images/kidsjeans.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0A8E0706371A413F86E17EF2 /* kidsshirt.png */ = {isa = PBXFileReference; name = "kidsshirt.png"; path = "../assets/fonts/images/kidsshirt.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		647A3D426DE64CBEB3A5159E /* kidstshirt.png */ = {isa = PBXFileReference; name = "kidstshirt.png"; path = "../assets/fonts/images/kidstshirt.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5165288BC210421DB1A58772 /* kurti.png */ = {isa = PBXFileReference; name = "kurti.png"; path = "../assets/fonts/images/kurti.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		51D20277F66B4622B8376240 /* lehenga.png */ = {isa = PBXFileReference; name = "lehenga.png"; path = "../assets/fonts/images/lehenga.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ABAA873D4F1D41D5A8BC54DB /* mentshirt.jpg */ = {isa = PBXFileReference; name = "mentshirt.jpg"; path = "../assets/fonts/images/mentshirt.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E86429A08BB84EC49B9C8433 /* minus.png */ = {isa = PBXFileReference; name = "minus.png"; path = "../assets/fonts/images/minus.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		672A5F32DB0749E0B4E50850 /* saree.jpg */ = {isa = PBXFileReference; name = "saree.jpg"; path = "../assets/fonts/images/saree.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4462577294434108B1095C47 /* shoess.png */ = {isa = PBXFileReference; name = "shoess.png"; path = "../assets/fonts/images/shoess.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CC300B448F5F4A7196D680A3 /* trousers.jpg */ = {isa = PBXFileReference; name = "trousers.jpg"; path = "../assets/fonts/images/trousers.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF1390B9F19342318492ADF3 /* ImageAssets.js */ = {isa = PBXFileReference; name = "ImageAssets.js"; path = "../assets/fonts/images/ImageAssets.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		91152502447F4E09AAF34D3F /* neww.jpg */ = {isa = PBXFileReference; name = "neww.jpg"; path = "../assets/fonts/images/neww.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7699B88040F8A987B510C191 /* libPods-ApnaKart-ApnaKartTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C80B921A6F3F58F76C31292 /* libPods-ApnaKart.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* ApnaKartTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* ApnaKartTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = ApnaKartTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* ApnaKart */ = {
+			isa = PBXGroup;
+			children = (
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+			);
+			name = ApnaKart;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-ApnaKart.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-ApnaKart-ApnaKartTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* ApnaKart */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* ApnaKartTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				3F1CB62AF846452E9D04017C /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* ApnaKart.app */,
+				00E356EE1AD99517003FC87E /* ApnaKartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-ApnaKart.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-ApnaKart.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-ApnaKart-ApnaKartTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-ApnaKart-ApnaKartTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3F1CB62AF846452E9D04017C /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A79BD138BFD24D019B41541C /* apps.png */,
+				F77657FF08024555B387E73E /* home.png */,
+				E8AE5A496E7842A69BC551D3 /* profile.png */,
+				D52BD798680447488BBAF245 /* search.png */,
+				897DB319EA45434E84187621 /* settings.png */,
+				779D54108E914D839778EFB1 /* facebook.png */,
+				3D3EE7B61B79465DBF852CE5 /* google.png */,
+				1582522F78D543EFAC0F262E /* arrow.svg */,
+				0191313813CB4984AA8E6321 /* go.png */,
+				A366E21A054A40D6B01529BB /* icon.png */,
+				EBB78B4FF99F45559208D0E8 /* search.svg */,
+				9E698AF773FA48BFB3963B16 /* profile.jpeg */,
+				D6F588E8380F4393AF5D0EE3 /* Urbanist-Bold.ttf */,
+				595A4B2C39FB447095EE24FB /* Urbanist-BoldItalic.ttf */,
+				59EB475BFC7C48639B70EACC /* Urbanist-ExtraBold.ttf */,
+				678BA97D10C6462C8F9B6D21 /* Urbanist-ExtraBoldItalic.ttf */,
+				DB89892F9A4D417FB3666401 /* Urbanist-ExtraLight.ttf */,
+				06763E083C17444391245884 /* Urbanist-ExtraLightItalic.ttf */,
+				5FD5081C0152487C931A01EE /* Urbanist-Italic.ttf */,
+				C0C2241FE95646B9AB2511A1 /* Urbanist-Light.ttf */,
+				3D5E815C6E474DCAAAACD31E /* Urbanist-LightItalic.ttf */,
+				DE6CA07E713D48FB8E2D8716 /* Urbanist-Medium.ttf */,
+				4706935C7B4E44779FB1260D /* Urbanist-MediumItalic.ttf */,
+				BB2C92D5A8E44D46B971F915 /* Urbanist-Regular.ttf */,
+				E467EC65042D4FD4B8B6F25C /* Urbanist-SemiBold.ttf */,
+				6805C8B6916E43B8A16A18BA /* Urbanist-SemiBoldItalic.ttf */,
+				CF4516C740034A6F969B5C4E /* Urbanist-Thin.ttf */,
+				916F52A48A7045A0836AAF82 /* Urbanist-ThinItalic.ttf */,
+				E5EC16EEDFA24074B40D686D /* bag.png */,
+				F3E9031BED454C34A8C36F0B /* heart.png */,
+				C6DBFF89D16C4B27826A00BC /* accesories.png */,
+				1D5D1B2E5BA449CD869BF3EE /* clothes.jpg */,
+				EACF8AC42A7946E0B1F7B625 /* arrow_down.png */,
+				7B0FA83B001C47DEB2254D1C /* like_filled.png */,
+				4080E15BD54A41BAA814F421 /* like_outline.png */,
+				1BFB0D953AC1427D9F9B5FA0 /* rating_empty.png */,
+				85EEF78A657B4866A573AB7A /* rating_filled.png */,
+				C1A9DF767A524EF6AD591D24 /* star.png */,
+				8F38C30E569C42BB9012D42C /* add.png */,
+				48FC99D6A760463BAA287DA7 /* casualshirt.jpg */,
+				4156991A58A24A4693A5DA02 /* dress.jpg */,
+				62B02137BF7A4C4887283243 /* eyewear.jpg */,
+				2926660FA49E4A20A5D54FF9 /* fashionsale.jpg */,
+				8915FC28A7F047F0BDED868D /* fomalshirt.jpg */,
+				A7A3A313EB5B4057B6016C52 /* frock.png */,
+				0AFC084894E845D6ADE239F1 /* gowns.jpg */,
+				3CE888A7DF584C3B93EF3EFF /* hoody.jpg */,
+				1430053D9D63499FBBFA6EA5 /* itembanner.png */,
+				A9331890EED14021BBB23962 /* jeans.jpg */,
+				D792F1D7AE3A47AA97FBD501 /* kidsjeans.png */,
+				0A8E0706371A413F86E17EF2 /* kidsshirt.png */,
+				647A3D426DE64CBEB3A5159E /* kidstshirt.png */,
+				5165288BC210421DB1A58772 /* kurti.png */,
+				51D20277F66B4622B8376240 /* lehenga.png */,
+				ABAA873D4F1D41D5A8BC54DB /* mentshirt.jpg */,
+				E86429A08BB84EC49B9C8433 /* minus.png */,
+				672A5F32DB0749E0B4E50850 /* saree.jpg */,
+				4462577294434108B1095C47 /* shoess.png */,
+				CC300B448F5F4A7196D680A3 /* trousers.jpg */,
+				FF1390B9F19342318492ADF3 /* ImageAssets.js */,
+				91152502447F4E09AAF34D3F /* neww.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* ApnaKartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ApnaKartTests" */;
+			buildPhases = (
+				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
+				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = ApnaKartTests;
+			productName = ApnaKartTests;
+			productReference = 00E356EE1AD99517003FC87E /* ApnaKartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* ApnaKart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ApnaKart" */;
+			buildPhases = (
+				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
+				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApnaKart;
+			productName = ApnaKart;
+			productReference = 13B07F961A680F5B00A75B9A /* ApnaKart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ApnaKart" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* ApnaKart */,
+				00E356ED1AD99517003FC87E /* ApnaKartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				2364FC2D16B54695B28B4517 /* apps.png in Resources */,
+				7671BDC68CA1412D84CE7D98 /* home.png in Resources */,
+				B36F8F20F507486695CB02CB /* profile.png in Resources */,
+				C379A8A3A6824BD298D8F348 /* search.png in Resources */,
+				9529C8EC7D674F1689C1D898 /* settings.png in Resources */,
+				CCA74CA623704EBBA4AAE473 /* facebook.png in Resources */,
+				699BCB052063476FA07EF7E7 /* google.png in Resources */,
+				141C3E70BCD34726AD070930 /* arrow.svg in Resources */,
+				616AB92F640447239F60DE62 /* go.png in Resources */,
+				4BA4B18216AC44D39B30AADF /* icon.png in Resources */,
+				9C1DF7F4D23E48B39718481A /* search.svg in Resources */,
+				569577AA7F6044B69EDEBA32 /* profile.jpeg in Resources */,
+				B52B301107DF4F6D8099AAD1 /* Urbanist-Bold.ttf in Resources */,
+				5BAF09C0783C4E4A8F943808 /* Urbanist-BoldItalic.ttf in Resources */,
+				22209AF1A15946DC88997264 /* Urbanist-ExtraBold.ttf in Resources */,
+				CBDA91EB1AE94DB5850B54F4 /* Urbanist-ExtraBoldItalic.ttf in Resources */,
+				5BA91E963F184532B9BA68A2 /* Urbanist-ExtraLight.ttf in Resources */,
+				229148592C3B42A199FDDE5E /* Urbanist-ExtraLightItalic.ttf in Resources */,
+				8EA3945C98EC45E9BCA82DF2 /* Urbanist-Italic.ttf in Resources */,
+				1B9EECE58A1F4393B49C3A56 /* Urbanist-Light.ttf in Resources */,
+				80183A96BE48436D9B6A22DD /* Urbanist-LightItalic.ttf in Resources */,
+				E885DC20B5D64A89A11082C1 /* Urbanist-Medium.ttf in Resources */,
+				8060D4BAD06049BFB3AD0297 /* Urbanist-MediumItalic.ttf in Resources */,
+				261454E3CA524DC7899FD6E0 /* Urbanist-Regular.ttf in Resources */,
+				0294B9F1DE8B492CBD9007CA /* Urbanist-SemiBold.ttf in Resources */,
+				9C55D213CAC742C3A27415D3 /* Urbanist-SemiBoldItalic.ttf in Resources */,
+				7EE47E50EA8C4A6A88E99203 /* Urbanist-Thin.ttf in Resources */,
+				2F132083D5694FCD97117AEE /* Urbanist-ThinItalic.ttf in Resources */,
+				A57934197E344E2C872EFBF7 /* bag.png in Resources */,
+				8B49D5B84E284759914C959A /* heart.png in Resources */,
+				8180D65F5F094961A660905D /* accesories.png in Resources */,
+				87672C0419634AEFAC79D20C /* clothes.jpg in Resources */,
+				CF416DA0836246CA9EA1B6ED /* arrow_down.png in Resources */,
+				6932C05F1FB444569E6426DA /* like_filled.png in Resources */,
+				6A3354E589864CD2A13811C4 /* like_outline.png in Resources */,
+				7E8048ECB36C4873BD8F8483 /* rating_empty.png in Resources */,
+				7531A5E3F5884976967DB2FD /* rating_filled.png in Resources */,
+				97062904ED174518ACB0767B /* star.png in Resources */,
+				5B0C92DFD456412B84885670 /* add.png in Resources */,
+				13FEA8243E3C42B69E16983E /* casualshirt.jpg in Resources */,
+				1EB2D98D83474D348A18BCF9 /* dress.jpg in Resources */,
+				EC73E7F5BCF243C0BD8B8C1B /* eyewear.jpg in Resources */,
+				520226BEA911431AB9519798 /* fashionsale.jpg in Resources */,
+				B52C9D7CDA254997A0DA8280 /* fomalshirt.jpg in Resources */,
+				64AC65DB06EA4E8CBED83C75 /* frock.png in Resources */,
+				639F080C397645239340B30B /* gowns.jpg in Resources */,
+				48511EB808FE4BACBAF18507 /* hoody.jpg in Resources */,
+				9855379F94C046B1B57C5602 /* itembanner.png in Resources */,
+				2F47C5997F814D588CC8E299 /* jeans.jpg in Resources */,
+				97EE52BDE66A47BE97C87158 /* kidsjeans.png in Resources */,
+				23F848CF03DE4EEBB86063D0 /* kidsshirt.png in Resources */,
+				417485DA61B94540BA2CB289 /* kidstshirt.png in Resources */,
+				470E5BEECDD24A68AC3BE976 /* kurti.png in Resources */,
+				757E1595EE154EF8A4F86836 /* lehenga.png in Resources */,
+				A5EE5688170C4DFDB826041F /* mentshirt.jpg in Resources */,
+				6003AC1162084694B325FAC0 /* minus.png in Resources */,
+				E56FB0F825214907B2DF7B63 /* saree.jpg in Resources */,
+				3EAE8BC93C1343509A71A210 /* shoess.png in Resources */,
+				947774E186F148C6AEA8FB9B /* trousers.jpg in Resources */,
+				35D355A3343449A29B8AF09B /* ImageAssets.js in Resources */,
+				3FA882F7801E40E0B96D34C1 /* neww.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+		};
+		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart/Pods-ApnaKart-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart/Pods-ApnaKart-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApnaKart/Pods-ApnaKart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApnaKart-ApnaKartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApnaKart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart/Pods-ApnaKart-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart/Pods-ApnaKart-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApnaKart/Pods-ApnaKart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApnaKart-ApnaKartTests/Pods-ApnaKart-ApnaKartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* ApnaKartTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* ApnaKart */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ApnaKart-ApnaKartTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ApnaKartTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApnaKart.app/ApnaKart";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ApnaKart-ApnaKartTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = ApnaKartTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApnaKart.app/ApnaKart";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ApnaKart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = ApnaKart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = ApnaKart;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ApnaKart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = ApnaKart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = ApnaKart;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+				);
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ApnaKartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ApnaKart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ApnaKart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

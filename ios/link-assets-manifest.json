@@ -1,0 +1,249 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/icons/apps.png",
+      "sha1": "21cc63e9d17410c1350a4e6e0ba87fe50b33f474"
+    },
+    {
+      "path": "assets/fonts/icons/arrow.svg",
+      "sha1": "543e672727a1d06f0d8cf85f36c5b434781a40db"
+    },
+    {
+      "path": "assets/fonts/icons/arrow_down.png",
+      "sha1": "75652a46e108cbce7c956915503090f6af9a0417"
+    },
+    {
+      "path": "assets/fonts/icons/bag.png",
+      "sha1": "211d64fb02f03f9249dda70ddce5d60df6d7d7ca"
+    },
+    {
+      "path": "assets/fonts/icons/go.png",
+      "sha1": "894228552d0dcd7a638bf72127ca4b6b369c4037"
+    },
+    {
+      "path": "assets/fonts/icons/heart.png",
+      "sha1": "97c582acc4240e6270cab57d20e9c45e20e364a1"
+    },
+    {
+      "path": "assets/fonts/icons/home.png",
+      "sha1": "87909e1cfc3e30e53bd21ac92f5720fc1a47368d"
+    },
+    {
+      "path": "assets/fonts/icons/icon.png",
+      "sha1": "470a1a6ffd952f635c9f6c9c5298204c94e85cdb"
+    },
+    {
+      "path": "assets/fonts/icons/like_filled.png",
+      "sha1": "d6fb9e1b36a85556809dde476df22dd30a882b08"
+    },
+    {
+      "path": "assets/fonts/icons/like_outline.png",
+      "sha1": "4a1bb4f052819a46e31320fe8f531045e8f682bb"
+    },
+    {
+      "path": "assets/fonts/icons/profile.png",
+      "sha1": "9334c04c191356228deae6a253e87edffecfab0e"
+    },
+    {
+      "path": "assets/fonts/icons/rating_empty.png",
+      "sha1": "57271bdd4c12eb41799ad221b55c221d35447560"
+    },
+    {
+      "path": "assets/fonts/icons/rating_filled.png",
+      "sha1": "54d1bf0734117481248f2efbd9d6a12009eaa53d"
+    },
+    {
+      "path": "assets/fonts/icons/search.png",
+      "sha1": "ea811f754313eb6f366110ecc5f94b47bff4d5a7"
+    },
+    {
+      "path": "assets/fonts/icons/search.svg",
+      "sha1": "bd4821957dc83aaed5bfcffd447e9302ed153a4c"
+    },
+    {
+      "path": "assets/fonts/icons/settings.png",
+      "sha1": "684fadcf19a4e4fa056be68bfbb6dbc1c12feb39"
+    },
+    {
+      "path": "assets/fonts/icons/star.png",
+      "sha1": "48c425bfb8cab4cf80feab014a2acdfb1099226d"
+    },
+    {
+      "path": "assets/fonts/images/accesories.png",
+      "sha1": "08fbf5d81f4de1847fc619a6305660cacc2bccfc"
+    },
+    {
+      "path": "assets/fonts/images/add.png",
+      "sha1": "973ace08fd3efc2ecf7102b236910ca3d94131c8"
+    },
+    {
+      "path": "assets/fonts/images/casualshirt.jpg",
+      "sha1": "191571ed38b58d2fdded4eb46b522d2446b6002f"
+    },
+    {
+      "path": "assets/fonts/images/clothes.jpg",
+      "sha1": "65fa50d7759c65c17ae28c21d8ad8dd79a272687"
+    },
+    {
+      "path": "assets/fonts/images/dress.jpg",
+      "sha1": "7f8cd0f6f0945615f6c1c479b361c8ef436dd536"
+    },
+    {
+      "path": "assets/fonts/images/eyewear.jpg",
+      "sha1": "54046fc99069239ff5431ef46252581ea30a490b"
+    },
+    {
+      "path": "assets/fonts/images/facebook.png",
+      "sha1": "9fd80b7610f0acbf80e583af89001ba9b534bebd"
+    },
+    {
+      "path": "assets/fonts/images/fashionsale.jpg",
+      "sha1": "ae35e41df3e4bb0b64a274286abae68045883a28"
+    },
+    {
+      "path": "assets/fonts/images/fomalshirt.jpg",
+      "sha1": "b0ac42622de6c05b8d1da338f54e6551a01047b8"
+    },
+    {
+      "path": "assets/fonts/images/frock.png",
+      "sha1": "45cddeae0db96baac840af0d9925154437398f58"
+    },
+    {
+      "path": "assets/fonts/images/google.png",
+      "sha1": "e2dbff0c5371c558ae4360cbe2014f00e5f87f21"
+    },
+    {
+      "path": "assets/fonts/images/gowns.jpg",
+      "sha1": "821f5603ae9370869429e236153ae92bde936d07"
+    },
+    {
+      "path": "assets/fonts/images/hoody.jpg",
+      "sha1": "0cb49a54eb4cfef347df9e7c3a4d404ff5eeb28a"
+    },
+    {
+      "path": "assets/fonts/images/ImageAssets.js",
+      "sha1": "20b9cc6afbc9407233994bcc0952e2041ec3136e"
+    },
+    {
+      "path": "assets/fonts/images/itembanner.png",
+      "sha1": "a62dd09c680d266d0f6d588b441052b339542de6"
+    },
+    {
+      "path": "assets/fonts/images/jeans.jpg",
+      "sha1": "b346aada0d83954a5b06360dbea6c4a5617bbebb"
+    },
+    {
+      "path": "assets/fonts/images/kidsjeans.png",
+      "sha1": "3fe235602b15be3dc96580ea86da7bd38c3914c7"
+    },
+    {
+      "path": "assets/fonts/images/kidsshirt.png",
+      "sha1": "728ecd3872b28c3a937adf211628a67faae19b19"
+    },
+    {
+      "path": "assets/fonts/images/kidstshirt.png",
+      "sha1": "9aeb8ccf0fb827d552815f511ed4538cc033eb5d"
+    },
+    {
+      "path": "assets/fonts/images/kurti.png",
+      "sha1": "6c25dd09a468ce1111e199c1c1aaeaca47fb8027"
+    },
+    {
+      "path": "assets/fonts/images/lehenga.png",
+      "sha1": "8ca590ee25a4f278fcca0e860bd8dc1ba1a715e3"
+    },
+    {
+      "path": "assets/fonts/images/mentshirt.jpg",
+      "sha1": "8c4ce3c51d58beefece5c1e5cd0192737cf49eed"
+    },
+    {
+      "path": "assets/fonts/images/minus.png",
+      "sha1": "bd27c983f139acb5f817977cedefdbe0a4e05143"
+    },
+    {
+      "path": "assets/fonts/images/neww.jpg",
+      "sha1": "67020b436409ed79bacd319fc6a03d68e602aaa4"
+    },
+    {
+      "path": "assets/fonts/images/profile.jpeg",
+      "sha1": "f2613bf0bacee68f5784f115f94aa06b1c485168"
+    },
+    {
+      "path": "assets/fonts/images/saree.jpg",
+      "sha1": "db80f4ab7ae3413d4fcf760ffe9b778dd4ea01b2"
+    },
+    {
+      "path": "assets/fonts/images/shoess.png",
+      "sha1": "74004cba05bd4bfd889a168eaa206b71baa1e552"
+    },
+    {
+      "path": "assets/fonts/images/trousers.jpg",
+      "sha1": "c96784e77a9f0e98c5612e1bb44f53fa0713aeca"
+    },
+    {
+      "path": "assets/fonts/Urbanist-Bold.ttf",
+      "sha1": "5393e451665e344701f6f250898895ca98dabdbc"
+    },
+    {
+      "path": "assets/fonts/Urbanist-BoldItalic.ttf",
+      "sha1": "f4a1e267a96bca0d7ef946e232f61611c0405327"
+    },
+    {
+      "path": "assets/fonts/Urbanist-ExtraBold.ttf",
+      "sha1": "8456433f5c419161b01f72c0db6d431132b5f74a"
+    },
+    {
+      "path": "assets/fonts/Urbanist-ExtraBoldItalic.ttf",
+      "sha1": "3fec61d75c1b844ccd01c6a378786a67dce575a5"
+    },
+    {
+      "path": "assets/fonts/Urbanist-ExtraLight.ttf",
+      "sha1": "2f64ebe6c0466770c52d2c59a558c7a5df040061"
+    },
+    {
+      "path": "assets/fonts/Urbanist-ExtraLightItalic.ttf",
+      "sha1": "4e7dfd8a9e56674fcd26701faa41a6ec3f597f4d"
+    },
+    {
+      "path": "assets/fonts/Urbanist-Italic.ttf",
+      "sha1": "24930b7124266e299f4232d2124b3f74fc23dc0f"
+    },
+    {
+      "path": "assets/fonts/Urbanist-Light.ttf",
+      "sha1": "9477d6f6236a773d649a5e58a2ab612411f8e1ee"
+    },
+    {
+      "path": "assets/fonts/Urbanist-LightItalic.ttf",
+      "sha1": "a6574263208df3f694fcebce8b52991a3e50b78d"
+    },
+    {
+      "path": "assets/fonts/Urbanist-Medium.ttf",
+      "sha1": "8fdacadcc8bf9a54e98e7894f54c0d8edab92b03"
+    },
+    {
+      "path": "assets/fonts/Urbanist-MediumItalic.ttf",
+      "sha1": "a89277d4b8e6b48ade27a7914b0267b99adef87f"
+    },
+    {
+      "path": "assets/fonts/Urbanist-Regular.ttf",
+      "sha1": "ca6e793bc43b42306c06fedc353c68af20ee2c7b"
+    },
+    {
+      "path": "assets/fonts/Urbanist-SemiBold.ttf",
+      "sha1": "a0dd44015ece2092d0b480cd60c87ccbe932e3f4"
+    },
+    {
+      "path": "assets/fonts/Urbanist-SemiBoldItalic.ttf",
+      "sha1": "a76907c1086fd04d6a35c316a3c4093e24048c80"
+    },
+    {
+      "path": "assets/fonts/Urbanist-Thin.ttf",
+      "sha1": "a5741733c8bb3dae3513ff8d7ecb04a472725974"
+    },
+    {
+      "path": "assets/fonts/Urbanist-ThinItalic.ttf",
+      "sha1": "73cc0bff711e9fbbcb7cb8f2ca683f33c6bdbae0"
+    }
+  ]
+}
