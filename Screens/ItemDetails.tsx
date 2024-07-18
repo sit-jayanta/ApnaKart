@@ -10,6 +10,7 @@ import Progress from '../components/Progress';
 import { ImagesAssets } from '../assets/images/ImageAssets';
 import { useAppDispatch, useAppSelector } from '../src/store';
 import { manageFavourite, addCart} from '../src/counterSlice';
+import LoadingIndicater from '../components/LoadingIndicater';
 
 const ItemDetails = ({ route }) => {
   const [product, updateProduct] = useState<Product>();
@@ -101,6 +102,7 @@ const ItemDetails = ({ route }) => {
   const refRBSheet: any = useRef();
   const colorRBSheet: any = useRef();
   const [sizeSelected, sizeClicked] = useState(false);
+  const [AddClicked, UpdateAddClicked] = useState(false);
   const [sizeList, updateSize] = useState<Size[]>(size);
   const [displaySize, updateDisplaySize] = useState('Size');
   const [colorSelected, colorClicked] = useState(false);
@@ -125,8 +127,10 @@ const ItemDetails = ({ route }) => {
   };
 
   const addToCart = (id , c, s)=>{
-    dispatch(addCart({id,c, s}));
-  }
+    if(c !== 'Color' && s !== 'Size'){
+      dispatch(addCart({id,c, s}));
+    }
+  };
 
   useEffect(() => {
     const { item }: any = route.params;
@@ -134,11 +138,11 @@ const ItemDetails = ({ route }) => {
   }, [items]);
   const updateLiked = (item: any) => {
     dispatch(manageFavourite(item.id));
-    console.log("Item======>>>",items.find(it=> it.id === item.id));
+    console.log('Item======>>>',items.find(it=> it.id === item.id));
   };
   const dimen = useWindowDimensions();
   return (
-    <ScrollView style={{ flex: 1, paddingBottom: 20, }} showsVerticalScrollIndicator={false}>
+    <ScrollView style={{ flex: 1, paddingBottom: 20 }} showsVerticalScrollIndicator={false}>
       <FlatList showsHorizontalScrollIndicator={true} horizontal style={{ backgroundColor: '#E0E0E0' }} data={product?.images} renderItem={({ item }) => (
         <Image source={{ uri: item }} style={{ height: dimen.height * 0.6, width: dimen.width, resizeMode: 'stretch' }} />
       )} />
@@ -165,14 +169,14 @@ const ItemDetails = ({ route }) => {
       <AirbnbRating showRating={false}
            count={5}
            starContainerStyle={{margin: 0}}
-           ratingContainerStyle={{marginStart: 12,alignSelf: 'flex-start',}}
+           ratingContainerStyle={{marginStart: 12,alignSelf: 'flex-start'}}
            selectedColor="#FFBA49"
            defaultRating={product?.rating}
            isDisabled={true}
             size={12}
              />
       <Text style={{ color: 'black',fontFamily: 'Urbanist-SemiBold', marginTop: 5, marginHorizontal: 15}}>{product?.description}</Text>
-      <TouchableOpacity activeOpacity={sizeSelected && colorSelected ? 0.3 : 1} onPress={() => {addToCart(product?.id, displaycolor, displaySize)}} style={{ marginBottom: 10 ,backgroundColor: sizeSelected && colorSelected ? '#DB3022' : '#EEB2B2', elevation: 10, marginTop: 20, marginHorizontal: 10, borderRadius: 10, paddingVertical: 10, alignContent: 'center' }}>
+      <TouchableOpacity activeOpacity={sizeSelected && colorSelected ? 0.3 : 1} onPress={() => {addToCart(product?.id, displaycolor, displaySize);}} style={{ marginBottom: 10 ,backgroundColor: sizeSelected && colorSelected ? '#DB3022' : '#EEB2B2', elevation: 10, marginTop: 20, marginHorizontal: 10, borderRadius: 10, paddingVertical: 10, alignContent: 'center' }}>
         <Text style={{ justifyContent: 'center', alignSelf: 'center', fontSize: 20, color: 'white', fontFamily: 'Urbanist-Regular' }}>Add to cart</Text>
       </TouchableOpacity>
       <RBSheet ref={refRBSheet} draggable dragOnContent height={240}>
@@ -258,7 +262,7 @@ const ItemDetails = ({ route }) => {
       <View>
       {
         product?.reviews.map(item => (
-          <View style={{marginHorizontal: 15,}} key={item.reviewerEmail}>
+          <View style={{marginHorizontal: 15}} key={item.reviewerEmail}>
           <View style={{backgroundColor: 'white',margin: 20,elevation: 10, borderRadius: 10, borderColor: '#DB3022'}}>
             <Text style={{marginTop: 15,marginHorizontal: 20,fontFamily: 'Urbanist-ExtraBold', fontSize: 17, color: 'black'}}>{item.reviewerName}</Text>
             <View style={{flexDirection: 'row'}}>
@@ -279,6 +283,11 @@ const ItemDetails = ({ route }) => {
         </View>
         ))
       }
+       {AddClicked && (
+        <View style={styles.overlay}>
+          <LoadingIndicater />
+        </View>
+      )}
       </View>
     </ScrollView>
   );
@@ -341,6 +350,12 @@ const styles = StyleSheet.create({
     flex: 0.08,
     alignSelf: 'center',
     justifyContent: 'center',
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

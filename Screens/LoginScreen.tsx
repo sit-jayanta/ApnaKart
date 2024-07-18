@@ -8,6 +8,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import ErrorText from '../components/ErrorText';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LoginSuccessful from '../components/LoginSuccessful';
+import LoadingIndicater from '../components/LoadingIndicater';
 
 const LoginScreen = ({ navigation, route }) => {
 
@@ -31,7 +32,7 @@ const LoginScreen = ({ navigation, route }) => {
             } catch (error) {
               console.error('Error fetching tasks', error);
             }
-          }, 4000);
+          }, 2000);
         }
       }
     function setError(emaill: string) {
@@ -93,7 +94,7 @@ const LoginScreen = ({ navigation, route }) => {
         </KeyboardAwareScrollView>
         {isLoginSuccessful && (
         <View style={styles.overlay}>
-          <LoginSuccessful />
+          <LoadingIndicater />
         </View>
       )}
         </View>

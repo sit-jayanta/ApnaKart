@@ -16,6 +16,7 @@ import Details from './Details';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import ItemScreen from './ItemScreen';
 import ItemDetails from './ItemDetails';
+import LoginScreen from './LoginScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -61,6 +62,33 @@ function HomeStackNavigator({navigation, route}) {
     <Stack.Navigator screenOptions={ routeName === 'Home' ?  {headerShown: false} : routeName === undefined ?  {headerShown: false} : {headerShown: true , headerTitleAlign: 'center'}}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="ItemScreen" component={ItemScreen} />
+      <Stack.Screen name="ItemDetails" component={ItemDetails} />
+    </Stack.Navigator>
+  );
+}
+
+function ProfileStackNavigator({navigation, route}) {
+  const [routeName, updateRoute] = useState<any>('');
+  React.useLayoutEffect(() => {
+    updateRoute(getFocusedRouteNameFromRoute(route));
+    if (routeName === 'LoginScreen') {
+      navigation.setOptions({ tabBarStyle: { display: 'none'}, headerStyle : { fontFamily: 'Urbanist-Bold',
+        fontSize: 25,
+        color: '#DB3022',
+        backgroundColor: '#DB3022',
+      } });
+    } else{
+      navigation.setOptions({  tabBarStyle: { display: 'flex', position: 'absolute',
+        height: 60,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20}});
+    }
+  }, [navigation, routeName, route]);
+
+  return (
+    <Stack.Navigator screenOptions={ routeName === 'LoginScreen' ?  {headerShown: false} : routeName === undefined ?  {headerShown: false} : {headerShown: true , headerTitleAlign: 'center',}}>
+      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="ItemDetails" component={ItemDetails} />
     </Stack.Navigator>
   );
@@ -167,13 +195,16 @@ const BottomNavigation = ({navigation}) => {
               </View>
           ),
       }} />
-      <Tab.Screen name="Profile" component={Profile} options={{
-          tabBarLabel: 'Profile',
-          title: 'Profile',
-          headerTitleAlign: 'center',
+      <Tab.Screen name="ProfileStackNavigator" component={ProfileStackNavigator} options={{
+         headerShown: false,
+         headerTitleAlign: 'center',
           headerTitleStyle: {
               fontFamily: 'Urbanist-Bold',
               fontSize: 25,
+              color: 'white',
+          },
+          headerBackgroundContainerStyle : {
+            backgroundColor: '#DB3022'
           },
           headerLeft: () => (
               <TouchableOpacity onPress={() => Alert.alert('Header Left Icon Pressed!')}>

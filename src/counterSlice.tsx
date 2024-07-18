@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export const fetchProducts = createAsyncThunk(
   '',

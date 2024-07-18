@@ -14,6 +14,7 @@ const Cart = () => {
   const [deleteItem, updateDelete] = useState(false);
   let { items } = useAppSelector((state) => state.global);
   const dispatch = useAppDispatch();
+  const swipeableRefs = useRef(new Map());
 
 
 
@@ -60,21 +61,21 @@ const Cart = () => {
             backgroundColor: 'white',
             elevation: 10,
             width: '60%',
-            height: '15%',
-            padding: 10,
+            height: '25%',
+            paddingVertical: 10,
             flexDirection: 'column',
             borderRadius: 10,
         }}>
             <Text style={{
                 paddingVertical: 20,
                 marginHorizontal: 10,
-                fontSize: 20,
+                fontSize: 17,
                 fontFamily: 'Urbanist-Medium',
                 textAlign: 'center',
                 color: 'black',
             }}>Do you really want to delete this item from cart?</Text>
-            <View style={{ flexDirection: 'row', flex: 1}}>
-                <TouchableOpacity onPressIn={() => {updateDelete(false)}} style={{backgroundColor: 'red', flex: 0.5, paddingHorizontal: 5, margin: 10, borderRadius: 10}}>
+            <View style={{ flexDirection: 'row', flex: 1, position: 'absolute', bottom: 20}}>
+                <TouchableOpacity onPress={() => {updateDelete(false), closeAllSwipeables()}} style={{backgroundColor: 'red', flex: 0.5,height: 50, paddingHorizontal: 5, marginStart: 10,marginEnd: 5, borderRadius: 5}}>
                     <Text 
                         style={{
                             flex: 1,
@@ -85,7 +86,7 @@ const Cart = () => {
                             color: 'white',
                         }}>No</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPressIn={() =>  deleteItemFromCart(itemID)} style={{backgroundColor: 'green', flex: 0.5,paddingHorizontal: 5, margin: 10, borderRadius: 10}}>
+                <TouchableOpacity onPress={() =>  deleteItemFromCart(itemID)} style={{backgroundColor: 'green', height: 50,flex: 0.5,paddingHorizontal: 5,marginStart: 5, marginEnd: 10, borderRadius: 5}}>
                     <Text
                         style={{
                             flex: 1,
@@ -100,13 +101,24 @@ const Cart = () => {
         </View>
     );
   };
+  const closeAllSwipeables = () => {
+    swipeableRefs.current.forEach(ref => {
+      if (ref) {
+        ref.close();
+      }
+    });
+  };
 
   return (
     <GestureHandlerRootView  style={{flex: 1}}>
     <FlatList contentContainerStyle={{ paddingTop: 10, paddingBottom: 60, }} style={{ marginTop: 10 }} data={products} onScrollToTop={() => {
       return true;
     }} renderItem={({ item }) => (
-        <Swipeable renderRightActions={ () => rightSwipe(item.id) } dragOffsetFromRightEdge={10}>
+        <Swipeable ref={(ref) => {
+          if (ref && !swipeableRefs.current.has(item.id)) {
+            swipeableRefs.current.set(item.id, ref);
+          }
+        }} renderRightActions={ () => rightSwipe(item.id) } dragOffsetFromRightEdge={10}>
           <View style={{
             flex: 1, flexDirection: 'row', elevation: 10, borderRadius: 10,
             height: 130, backgroundColor: 'white', marginBottom: 15, marginTop: 5, marginHorizontal: 15, justifyContent: 'center', alignContent: 'center'
@@ -140,6 +152,9 @@ const Cart = () => {
           </View>
         </Swipeable>
     )} />
+    <TouchableOpacity style={{backgroundColor: '#DB3022', marginBottom: 70, marginHorizontal: 10,borderRadius: 10, elevation: 10, alignItems: 'center', justifyContent: 'center'}}>
+      <Text style={{marginVertical: 15, color: 'white', fontFamily: 'Urbanist-Medium'}}>Check Out</Text>
+    </TouchableOpacity>
      {deleteItem && (
           <TouchableOpacity activeOpacity={1} style={styles.overlay}>
           <Dialog />
@@ -166,7 +181,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {configureStore} from '@reduxjs/toolkit';
-import reducer, { setCounter } from './counterSlice';
+import reducer, {  } from './counterSlice';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import storage from '@react-native-async-storage/async-storage';
 import { persistStore, persistReducer } from 'redux-persist';

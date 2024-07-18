@@ -8,6 +8,7 @@ import { StarRatingDisplay } from 'react-native-star-rating-widget';
 import { Double } from 'react-native/Libraries/Types/CodegenTypes';
 import { fetchProducts, manageFavourite } from '../src/counterSlice';
 import { useAppDispatch, useAppSelector } from '../src/store';
+import { AxiosError } from 'axios';
 
 
 const ItemScreen = ({ navigation }) => {
@@ -45,35 +46,15 @@ const ItemScreen = ({ navigation }) => {
     name: string,
     isSelected: boolean,
   }
-  const [list, updateList] = useState<ProductList | null>(null);
-  const [filtered, updateFiltered] = useState<ProductList | null>(null);
+  const [idd, updateId] = useState(0);
+  const [filtered, updateFiltered] = useState<Product[] | null>(null);
   const [category, updateCategory] = useState<CategoryList[] | any>(null);
   const [isLoaded, updateLoaded] = useState(false);
+  const [categoryName, updateCategoryName] = useState('');
   const dispatch = useAppDispatch();
   let {status, items} = useAppSelector((state) => state.global);
-  // const products = useSelector((state) => state.global.items);
-  // const status = useSelector(state => state.global.status);
 
-  // useEffect(() => {
-  //   if (status === 'idle') {
-  //     dispatch(fetchProducts());
-  //   }
-  // }, [status, dispatch]);
   useEffect(() => {
-    // const getProducts = async () => {
-    //   try {
-    //     axios.get('https://dummyjson.com/products?limit=194').then(
-    //       res => {
-    //         const data = res.data;
-    //         updateLoaded(true);
-    //         updateList(data);
-    //         updateFiltered(data);
-    //       });
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // };
-
     const getCategories = async () => {
       try {
         const response = await fetch('https://dummyjson.com/products/category-list');
@@ -85,44 +66,55 @@ const ItemScreen = ({ navigation }) => {
         console.error(error);
       }
     };
-    //getProducts();
     getCategories();
-    if(items.length === 0){
-      dispatch(fetchProducts());
-    }
+    let newList = items;
+      updateFiltered(newList);
+      console.log('status=====>', filtered);
     console.log('status=====>', status);
   }, []);
+
   const setSelected = (position) => {
     console.log(position);
     if (category.length > 0) {
+      updateCategoryName(category[position].name);
       const newCategory = category.map((item, index) => ({
         ...item,
         isSelected: index === position,
       }));
       updateCategory(newCategory);
-
       filterList(category[position].name);
     }
   };
 
   const filterList = (categ) => {
-    const newList: any = list?.products.filter(item =>
+    const newList: any = items.filter(item =>
       item.category === categ
     );
-    updateFiltered({ products: newList });
+    console.log('Filtered List =====> ', newList);
+
+    updateFiltered(newList);
   };
 
   const updateSelected = (id : any)=>{
     dispatch(manageFavourite(id));
-    console.log('manangeggg',manageFavourite(id));
+    updateId(id);
+    console.log('categoryName=========================',categoryName);
+    console.log('manangeggg',idd);
   };
+
+  useEffect(() => {
+    if (categoryName != '') {
+    filterList(categoryName);
+    }
+  }, [items]);
+
   return (
     <View style={{ flex: 1, backgroundColor: 'white', alignContent: 'center' }}>
       {isLoaded ? (
         <>
           <FlatList contentContainerStyle={{ paddingVertical: 10, paddingHorizontal: 10 }} showsHorizontalScrollIndicator={false} style={{ alignSelf: 'center'}} keyExtractor={(item) => item.name} horizontal data={category} renderItem={({ item, index }) => {
             return (
-              <TouchableOpacity onPress={() => { setSelected(index) }}>
+              <TouchableOpacity onPress={() => { setSelected(index); }}>
                 <Text style={{
                   height: 30, marginEnd: 2, borderRadius: 15, color: item.isSelected ? 'white' : 'black', fontSize: 16, paddingHorizontal: 10,
                   paddingVertical: 0, elevation: 5, borderColor: '#E5B801', borderWidth: item.isSelected ? 1.5 : 0,
@@ -133,10 +125,10 @@ const ItemScreen = ({ navigation }) => {
             );
           }}
           />
-          <FlatList contentContainerStyle={{paddingTop : 10}}style={{ marginTop: 10 }} data={items} onScrollToTop={() => {
+          <FlatList contentContainerStyle={{paddingTop : 10}}style={{ marginTop: 10 }} data={filtered} onScrollToTop={() => {
             return true;
-          }} renderItem={({ item, index }) => (
-            <View style={{ flex: 1, marginHorizontal: 15, marginBottom: 25, }}>
+          }} renderItem={({ item }) => (
+            <View style={{ flex: 1, marginHorizontal: 15, marginBottom: 25 }}>
               <TouchableOpacity onPress={() => { navigation.navigate('ItemDetails',{item}); }} style={{
                 flexDirection: 'row',
                 backgroundColor: 'white', elevation: 10, borderRadius: 10, justifyContent: 'center', alignContent: 'center',
@@ -151,14 +143,14 @@ const ItemScreen = ({ navigation }) => {
                   <Text ellipsizeMode="tail" numberOfLines={2} style={{
                     fontFamily: 'Urbanist-SemiBold',
                     color: 'black', fontSize: 15,
-                    textAlign: 'auto'
+                    textAlign: 'auto',
                   }}>{item.title}</Text>
                   <StarRatingDisplay style={{ width: 10, marginStart: 0, marginTop: 5 }} rating={item.rating} starSize={15} />
                   <Text style={{ fontFamily: 'Urbanist-ExtraBold', fontSize: 20, color: '#DB3022', marginTop: 5 }}>${item.price}</Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity onPress={()=> {updateSelected(item.id)}} activeOpacity={1} style={{ padding: 5, position: 'absolute', bottom: -15, end: 20, backgroundColor: '#F5F5F5', borderRadius: 50, elevation: 5 }}>
-                <Image style={{ width: 25, height: 25 }} source={items[index].isLiked ? require('../assets/icons/like_filled.png') : require('../assets/icons/like_outline.png')} />
+              <TouchableOpacity onPress={()=> {updateSelected(item.id);}} activeOpacity={1} style={{ padding: 5, position: 'absolute', bottom: -15, end: 20, backgroundColor: '#F5F5F5', borderRadius: 50, elevation: 5 }}>
+                <Image style={{ width: 25, height: 25 }} source={ item.isLiked ? require('../assets/icons/like_filled.png') : require('../assets/icons/like_outline.png')} />
               </TouchableOpacity>
             </View>
           )} />
