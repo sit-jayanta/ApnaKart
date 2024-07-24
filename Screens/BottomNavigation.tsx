@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/no-unstable-nested-components */
@@ -11,12 +12,12 @@ import { } from 'react-native-paper';
 import SearchIcon from '../components/search';
 import Cart from './Cart';
 import Favourites from './Favourites';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Details from './Details';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import ItemScreen from './ItemScreen';
 import ItemDetails from './ItemDetails';
 import LoginScreen from './LoginScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
@@ -59,10 +60,10 @@ function HomeStackNavigator({navigation, route}) {
   }, [navigation, routeName, route]);
 
   return (
-    <Stack.Navigator screenOptions={ routeName === 'Home' ?  {headerShown: false} : routeName === undefined ?  {headerShown: false} : {headerShown: true , headerTitleAlign: 'center'}}>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="ItemScreen" component={ItemScreen} />
-      <Stack.Screen name="ItemDetails" component={ItemDetails} />
+      <Stack.Screen name="ItemDetails" component={ItemDetails}  />
     </Stack.Navigator>
   );
 }

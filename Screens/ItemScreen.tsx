@@ -9,6 +9,8 @@ import { Double } from 'react-native/Libraries/Types/CodegenTypes';
 import { fetchProducts, manageFavourite } from '../src/counterSlice';
 import { useAppDispatch, useAppSelector } from '../src/store';
 import { AxiosError } from 'axios';
+import Toolbar from '../components/Toolbar';
+import Animated, { SharedTransition, withSpring, withTiming } from 'react-native-reanimated';
 
 
 const ItemScreen = ({ navigation }) => {
@@ -67,8 +69,6 @@ const ItemScreen = ({ navigation }) => {
       }
     };
     getCategories();
-    let newList = items;
-      updateFiltered(newList);
       console.log('status=====>', filtered);
     console.log('status=====>', status);
   }, []);
@@ -83,6 +83,7 @@ const ItemScreen = ({ navigation }) => {
       }));
       updateCategory(newCategory);
       filterList(category[position].name);
+      console.log('categoryName=========================',category[position].name);
     }
   };
 
@@ -90,8 +91,7 @@ const ItemScreen = ({ navigation }) => {
     const newList: any = items.filter(item =>
       item.category === categ
     );
-    console.log('Filtered List =====> ', newList);
-
+    // console.log('Filtered List =====> ', newList);
     updateFiltered(newList);
   };
 
@@ -105,16 +105,20 @@ const ItemScreen = ({ navigation }) => {
   useEffect(() => {
     if (categoryName != '') {
     filterList(categoryName);
+    }else {
+      let newList = items;
+      updateFiltered(newList);
     }
   }, [items]);
 
   return (
-    <View style={{ flex: 1, backgroundColor: 'white', alignContent: 'center' }}>
+    <View  style={{ flex: 1, backgroundColor: 'white' }}>
       {isLoaded ? (
         <>
-          <FlatList contentContainerStyle={{ paddingVertical: 10, paddingHorizontal: 10 }} showsHorizontalScrollIndicator={false} style={{ alignSelf: 'center'}} keyExtractor={(item) => item.name} horizontal data={category} renderItem={({ item, index }) => {
+        <Toolbar />
+          <FlatList collapsable={false} contentContainerStyle={{ paddingVertical: 10, paddingHorizontal: 10 }} showsHorizontalScrollIndicator={false} keyExtractor={(item) => item.name} horizontal data={category} renderItem={({ item, index }) => {
             return (
-              <TouchableOpacity onPress={() => { setSelected(index); }}>
+              <TouchableOpacity style={{ height: 30}}onPress={() => { setSelected(index); }}>
                 <Text style={{
                   height: 30, marginEnd: 2, borderRadius: 15, color: item.isSelected ? 'white' : 'black', fontSize: 16, paddingHorizontal: 10,
                   paddingVertical: 0, elevation: 5, borderColor: '#E5B801', borderWidth: item.isSelected ? 1.5 : 0,
@@ -125,16 +129,15 @@ const ItemScreen = ({ navigation }) => {
             );
           }}
           />
-          <FlatList contentContainerStyle={{paddingTop : 10}}style={{ marginTop: 10 }} data={filtered} onScrollToTop={() => {
-            return true;
-          }} renderItem={({ item }) => (
-            <View style={{ flex: 1, marginHorizontal: 15, marginBottom: 25 }}>
-              <TouchableOpacity onPress={() => { navigation.navigate('ItemDetails',{item}); }} style={{
+          <FlatList contentContainerStyle={{paddingTop : 10}}style={{marginTop: 10 }} data={filtered} renderItem={({ item }) => (
+            <View style={{ marginHorizontal: 15, marginBottom: 25 }}>
+              <TouchableOpacity activeOpacity={1} onPress={() => { navigation.navigate('ItemDetails',{item}); }} style={{
                 flexDirection: 'row',
                 backgroundColor: 'white', elevation: 10, borderRadius: 10, justifyContent: 'center', alignContent: 'center',
                 height: 130,
               }}>
-                <Image style={{ flex: 0.35, resizeMode: 'cover', margin: 20 }} source={{ uri: item.thumbnail }} />
+
+                <Animated.Image sharedTransitionTag={'image' + item.id} style={{flex: 0.35,margin: 20, resizeMode: 'contain'}} source={{ uri: item.thumbnail }} />
                 <View style={{ flex: 0.65, backgroundColor: '#F5F5F5', borderTopEndRadius: 10, borderBottomEndRadius: 10, paddingHorizontal: 10 }}>
                   <Text style={{
                     marginTop: 10, borderRadius: 20, color: 'white', fontSize: 11, paddingHorizontal: 10, paddingVertical: 4, textAlign: 'center',

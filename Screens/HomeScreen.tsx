@@ -34,8 +34,6 @@ const HomeScreen = ({ navigation }) => {
     const [isLoading, setisLoading] = useState(true);
     const [listone, setlistone] = useState();
     const [listtwo, setlisttwo] = useState();
-
-
     let { items, status } = useAppSelector((state) => state.global);
     let dispatch = useAppDispatch();
     useEffect(() => {
