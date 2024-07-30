@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -53,17 +53,26 @@ const categoryList: Category[] = [
 const Details = () => {
   return (
     <SafeAreaView>
-      <View style={{ flexDirection: 'row', borderRadius: 25, backgroundColor: '#DB3022', margin: 10, alignItems: 'center', justifyContent: 'center', paddingVertical: 15 }}>
-        <Text style={{ fontFamily: 'Urbanist-Regular', alignSelf: 'center', color: 'white' }}>VIEW ALL ITEMS</Text>
+      <View style={styles.btnBack}>
+        <Text style={styles.btnText}>VIEW ALL ITEMS</Text>
       </View>
-      <Text style={{ fontFamily: 'Urbanist-Regular', color: '#9B9B9B', marginStart: 15, fontSize: 15}}>Choose Category</Text>
-      <FlatList style={{ marginTop: 20 }}
+      <Text style={styles.text}>Choose Category</Text>
+      <FlatList style={styles.flatlist}
         data={categoryList}
         renderItem={({ item }) =>
-        <><Text style={{ paddingVertical: 10, fontFamily: 'Urbanist-Regular', paddingStart: 30, fontSize: 20, color: 'black' }}>{item?.name}</Text><View style={{ borderBottomColor: '#669B9B9B', borderBottomWidth:1, opacity: 0.2 }}></View></>
+        <><Text style={styles.text2}>{item?.name}</Text><View style={styles.categoryBg} /></>
         } />
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  btnBack : { flexDirection: 'row', borderRadius: 25, backgroundColor: '#DB3022', margin: 10, alignItems: 'center', justifyContent: 'center', paddingVertical: 15 },
+  text: { fontFamily: 'Urbanist-Regular', color: '#9B9B9B', marginStart: 15, fontSize: 15},
+  btnText: { fontFamily: 'Urbanist-Regular', alignSelf: 'center', color: 'white' },
+  text2: { paddingVertical: 10, fontFamily: 'Urbanist-Regular', paddingStart: 30, fontSize: 20, color: 'black' },
+  categoryBg: { borderBottomColor: '#669B9B9B', borderBottomWidth:1, opacity: 0.2 },
+  flatlist : { marginTop: 20 },
+});
 
 export default Details;

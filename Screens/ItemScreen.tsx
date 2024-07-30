@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import { View, Text, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator } from 'react-native-paper';
 import { Image } from 'react-native';
@@ -54,7 +54,7 @@ const ItemScreen = ({ navigation }) => {
   const [isLoaded, updateLoaded] = useState(false);
   const [categoryName, updateCategoryName] = useState('');
   const dispatch = useAppDispatch();
-  let {status, items} = useAppSelector((state) => state.global);
+  let { status, items } = useAppSelector((state) => state.global);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -69,7 +69,7 @@ const ItemScreen = ({ navigation }) => {
       }
     };
     getCategories();
-      console.log('status=====>', filtered);
+    console.log('status=====>', filtered);
     console.log('status=====>', status);
   }, []);
 
@@ -83,7 +83,7 @@ const ItemScreen = ({ navigation }) => {
       }));
       updateCategory(newCategory);
       filterList(category[position].name);
-      console.log('categoryName=========================',category[position].name);
+      console.log('categoryName=========================', category[position].name);
     }
   };
 
@@ -95,54 +95,42 @@ const ItemScreen = ({ navigation }) => {
     updateFiltered(newList);
   };
 
-  const updateSelected = (id : any)=>{
+  const updateSelected = (id: any) => {
     dispatch(manageFavourite(id));
     updateId(id);
-    console.log('categoryName=========================',categoryName);
-    console.log('manangeggg',idd);
+    console.log('categoryName=========================', categoryName);
+    console.log('manangeggg', idd);
   };
 
   useEffect(() => {
     if (categoryName != '') {
-    filterList(categoryName);
-    }else {
+      filterList(categoryName);
+    } else {
       let newList = items;
       updateFiltered(newList);
     }
   }, [items]);
 
   return (
-    <View  style={{ flex: 1, backgroundColor: 'white' }}>
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
       {isLoaded ? (
         <>
-        <Toolbar />
-          <FlatList collapsable={false} contentContainerStyle={{ paddingVertical: 10, paddingHorizontal: 10 }} showsHorizontalScrollIndicator={false} keyExtractor={(item) => item.name} horizontal data={category} renderItem={({ item, index }) => {
+          <Toolbar />
+          <FlatList collapsable={false} contentContainerStyle={styles.categoryContainer} showsHorizontalScrollIndicator={false} keyExtractor={(item) => item.name} horizontal data={category} renderItem={({ item, index }) => {
             return (
-              <TouchableOpacity style={{ height: 30}}onPress={() => { setSelected(index); }}>
-                <Text style={{
-                  height: 30, marginEnd: 2, borderRadius: 15, color: item.isSelected ? 'white' : 'black', fontSize: 16, paddingHorizontal: 10,
-                  paddingVertical: 0, elevation: 5, borderColor: '#E5B801', borderWidth: item.isSelected ? 1.5 : 0,
-                  alignContent: 'center', justifyContent: 'center', textAlign: 'center', textAlignVertical: 'center',
-                  backgroundColor: item.isSelected ? '#DB3022' : 'white', fontFamily: 'Urbanist-Bold', alignSelf: 'baseline',
-                }}>{item.name}</Text>
+              <TouchableOpacity style={{ height: 30 }} onPress={() => { setSelected(index); }}>
+                <Text style={[styles.category, { color: item.isSelected ? 'white' : 'black', borderWidth: item.isSelected ? 1.5 : 0, backgroundColor: item.isSelected ? '#DB3022' : 'white' }]}>{item.name}</Text>
               </TouchableOpacity>
             );
           }}
           />
-          <FlatList contentContainerStyle={{paddingTop : 10}}style={{marginTop: 10 }} data={filtered} renderItem={({ item }) => (
+          <FlatList contentContainerStyle={{ paddingTop: 10 }} style={{ marginTop: 10 }} data={filtered} renderItem={({ item }) => (
             <View style={{ marginHorizontal: 15, marginBottom: 25 }}>
-              <TouchableOpacity activeOpacity={1} onPress={() => { navigation.navigate('ItemDetails',{item}); }} style={{
-                flexDirection: 'row',
-                backgroundColor: 'white', elevation: 10, borderRadius: 10, justifyContent: 'center', alignContent: 'center',
-                height: 130,
-              }}>
+              <TouchableOpacity activeOpacity={1} onPress={() => { navigation.navigate('ItemDetails', { item }); }} style={styles.itemCell}>
 
-                <Animated.Image sharedTransitionTag={'image' + item.id} style={{flex: 0.35,margin: 20, resizeMode: 'contain'}} source={{ uri: item.thumbnail }} />
-                <View style={{ flex: 0.65, backgroundColor: '#F5F5F5', borderTopEndRadius: 10, borderBottomEndRadius: 10, paddingHorizontal: 10 }}>
-                  <Text style={{
-                    marginTop: 10, borderRadius: 20, color: 'white', fontSize: 11, paddingHorizontal: 10, paddingVertical: 4, textAlign: 'center',
-                    backgroundColor: '#DB3022', fontFamily: 'Urbanist-Bold', alignSelf: 'baseline', borderColor: '#E5B801', borderWidth: 1.5,
-                  }}>{item.category}</Text>
+                <Animated.Image sharedTransitionTag={'image' + item.id} style={styles.image} source={{ uri: item.thumbnail }} />
+                <View style={styles.itemBg}>
+                  <Text style={styles.itemCateg}>{item.category}</Text>
                   <Text ellipsizeMode="tail" numberOfLines={2} style={{
                     fontFamily: 'Urbanist-SemiBold',
                     color: 'black', fontSize: 15,
@@ -152,8 +140,8 @@ const ItemScreen = ({ navigation }) => {
                   <Text style={{ fontFamily: 'Urbanist-ExtraBold', fontSize: 20, color: '#DB3022', marginTop: 5 }}>${item.price}</Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity onPress={()=> {updateSelected(item.id);}} activeOpacity={1} style={{ padding: 5, position: 'absolute', bottom: -15, end: 20, backgroundColor: '#F5F5F5', borderRadius: 50, elevation: 5 }}>
-                <Image style={{ width: 25, height: 25 }} source={ item.isLiked ? require('../assets/icons/like_filled.png') : require('../assets/icons/like_outline.png')} />
+              <TouchableOpacity onPress={() => { updateSelected(item.id); }} activeOpacity={1} style={{ padding: 5, position: 'absolute', bottom: -15, end: 20, backgroundColor: '#F5F5F5', borderRadius: 50, elevation: 5 }}>
+                <Image style={{ width: 25, height: 25 }} source={item.isLiked ? require('../assets/icons/like_filled.png') : require('../assets/icons/like_outline.png')} />
               </TouchableOpacity>
             </View>
           )} />
@@ -164,5 +152,28 @@ const ItemScreen = ({ navigation }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  category: {
+    height: 30, marginEnd: 2, borderRadius: 15, fontSize: 16, paddingHorizontal: 10,
+    paddingVertical: 0, elevation: 5, borderColor: '#E5B801',
+    alignContent: 'center', justifyContent: 'center', textAlign: 'center', textAlignVertical: 'center',
+    fontFamily: 'Urbanist-Bold', alignSelf: 'baseline',
+  },
+  categoryContainer: {
+    paddingVertical: 10, paddingHorizontal: 10
+  },
+  itemCell: {
+    flexDirection: 'row',
+    backgroundColor: 'white', elevation: 10, borderRadius: 10, justifyContent: 'center', alignContent: 'center',
+    height: 130,
+  },
+  image: { flex: 0.35, margin: 20, resizeMode: 'contain' },
+  itemBg: { flex: 0.65, backgroundColor: '#F5F5F5', borderTopEndRadius: 10, borderBottomEndRadius: 10, paddingHorizontal: 10 },
+  itemCateg: {
+    marginTop: 10, borderRadius: 20, color: 'white', fontSize: 11, paddingHorizontal: 10, paddingVertical: 4, textAlign: 'center',
+    backgroundColor: '#DB3022', fontFamily: 'Urbanist-Bold', alignSelf: 'baseline', borderColor: '#E5B801', borderWidth: 1.5,
+  },
+});
 
 export default ItemScreen;

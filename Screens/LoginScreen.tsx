@@ -80,14 +80,14 @@ const LoginScreen = ({ navigation, route }) => {
             </View>
             <TouchableOpacity onPress={() => { storedata();(
                 <LoginSuccessful />
-            )}} style={{ backgroundColor: 'red', borderRadius: 5, elevation: 10, margin: 20, padding: 10 }}>
-                <Text style={{ color: 'white', fontFamily: 'Urbanist-Bold', fontSize: 20, textAlign: 'center' }}>LOG IN</Text>
+            )}} style={styles.button}>
+                <Text style={styles.btntext}>LOG IN</Text>
             </TouchableOpacity>
             <View style={{ flex: 1, flexDirection: 'row', flexShrink: 1, marginHorizontal: 100, marginVertical: 10 }}>
-                <TouchableOpacity style={{ backgroundColor: 'white', elevation: 10, flex: 0.5, alignItems: 'center', paddingVertical: 10, justifyContent: 'center', marginEnd: 10, borderRadius: 115, height: '100%', width: '15%' }}>
+                <TouchableOpacity style={styles.google}>
                     <Image style={{ alignSelf: 'center' }} source={ImagesAssets.google} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ backgroundColor: 'white', elevation: 10, flex: 0.5, justifyContent: 'center', height: '100%', alignItems: 'center', borderRadius: 115 }}>
+                <TouchableOpacity style={styles.facebook}>
                     <Image source={ImagesAssets.facebook} />
                 </TouchableOpacity>
             </View>
@@ -146,6 +146,10 @@ const styles = StyleSheet.create({
         paddingBottom: 5,
         paddingTop: 0,
     },
+    button: { backgroundColor: 'red', borderRadius: 5, elevation: 10, margin: 20, padding: 10 },
+    btntext: { color: 'white', fontFamily: 'Urbanist-Bold', fontSize: 20, textAlign: 'center' },
+    google: { backgroundColor: 'white', elevation: 10, flex: 0.5, alignItems: 'center', paddingVertical: 10, justifyContent: 'center', marginEnd: 10, borderRadius: 115, height: '100%', width: '15%' },
+    facebook: { backgroundColor: 'white', elevation: 10, flex: 0.5, justifyContent: 'center', height: '100%', alignItems: 'center', borderRadius: 115 },
     overlay: {
         ...StyleSheet.absoluteFillObject,
         backgroundColor: 'rgba(0, 0, 0, 0.5)',

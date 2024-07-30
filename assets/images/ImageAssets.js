@@ -30,4 +30,6 @@ export const ImagesAssets = {
   banner: require('./itembanner.png'),
   plus: require('./add.png'),
   minus: require('./minus.png'),
+  camera : require('../icons/diaphragm.png'),
+  gallery : require('../icons/gallery.png'),
 };

@@ -17,7 +17,11 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import ItemScreen from './ItemScreen';
 import ItemDetails from './ItemDetails';
 import LoginScreen from './LoginScreen';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import  CategoryIcon from 'react-native-vector-icons/MaterialIcons';
+import  HomeIcon from 'react-native-vector-icons/Entypo';
+import  LikeIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import  UserIcon from 'react-native-vector-icons/FontAwesome5';
 
 const Stack = createNativeStackNavigator();
 
@@ -139,8 +143,8 @@ const BottomNavigation = ({navigation}) => {
               </TouchableOpacity>
             ),
           tabBarIcon: ({ focused }) => (
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <Image source={require('../assets/icons/apps.png')} style={{ tintColor: focused ? '#DB3022' : '#9B9B9B', width: focused ? 36 : 24, height: focused ? 36 : 24 }} />
+              <View style={{flex: 1,width: 40,justifyContent: 'center', alignItems: 'center'}}>
+                  <CategoryIcon name="category" size={focused ? 30 : 24} color={ focused ? '#DB3022' : '#9B9B9B'}/>
               </View>
           ),
       }} />
@@ -161,16 +165,16 @@ const BottomNavigation = ({navigation}) => {
               </TouchableOpacity>
             ),
           tabBarIcon: ({ focused }) => (
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <Image source={require('../assets/icons/heart.png')} style={{ tintColor: focused ? '#DB3022' : '#9B9B9B', width: focused ? 36 : 24, height: focused ? 36 : 24 }} />
+            <View style={{flex: 1,width: 40,justifyContent: 'center', alignItems: 'center'}}>
+                  <LikeIcon name="cards-heart" size={focused ? 30 : 24} color={focused ? '#DB3022' : '#9B9B9B'} />
               </View>
           ),
       }} />
       <Tab.Screen name="HomeStackNavigator" component={HomeStackNavigator} options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <Image source={require('../assets/icons/home.png')} style={{ tintColor: focused ? '#DB3022' : '#9B9B9B', width: focused ? 36 : 24, height: focused ? 36 : 24 }} />
+            <View style={{flex: 1,width: 40,justifyContent: 'center', alignItems: 'center'}}>
+                  <HomeIcon name="home" size={focused ? 30 : 24} color={focused ? '#DB3022' : '#9B9B9B'} />
               </View>
           ),
       }} />
@@ -191,8 +195,8 @@ const BottomNavigation = ({navigation}) => {
               </TouchableOpacity>
             ),
           tabBarIcon: ({ focused }) => (
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <Image source={require('../assets/icons/bag.png')} style={{ tintColor: focused ? '#DB3022' : '#9B9B9B', width: focused ? 36 : 24, height: focused ? 36 : 24 }} />
+            <View style={{flex: 1,width: 40,justifyContent: 'center', alignItems: 'center'}}>
+                   <HomeIcon name="shopping-cart" size={focused ? 30 : 24} color={focused ? '#DB3022' : '#9B9B9B'} />
               </View>
           ),
       }} />
@@ -216,8 +220,8 @@ const BottomNavigation = ({navigation}) => {
               </TouchableOpacity>
             ),
           tabBarIcon: ({ focused }) => (
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <Image source={require('../assets/icons/profile.png')} style={{ tintColor: focused ? '#DB3022' : '#9B9B9B', width: focused ? 36 : 24, height: focused ? 36 : 24 }} />
+            <View style={{flex: 1,width: 40,justifyContent: 'center', alignItems: 'center'}}>
+                  <UserIcon name="user-alt" size={focused ? 30 : 24} color={focused ? '#DB3022' : '#9B9B9B'} />
               </View>
           ),
       }} />
