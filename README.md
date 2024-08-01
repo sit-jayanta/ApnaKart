@@ -3,7 +3,12 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-![Profile](https://github.com/user-attachments/assets/50b1eaa9-ad7d-423c-9aad-6a3455106ee8)
+>**Screenshots**
+![Profile]
+>(https://github.com/user-attachments/assets/edd90ec9-fa74-4ec1-aff0-5660633c94f8)
+>(https://github.com/user-attachments/assets/b3a8ad89-3366-435c-9bac-4849258c0dc2)
+
+
 
 ## Step 1: Start the Metro Server
 
