@@ -161,7 +161,7 @@ const Profile = ({ navigation }) => {
     <ScrollView style={{ flex: 1, marginBottom: 64 }}>
       <View style={{ flexDirection: 'row' }}>
         <Image resizeMode="cover" style={styles.profile} source={imageUri === null ? ImagesAssets.profile : {uri : imageUri}} />
-        <TouchableOpacity onPress={()=>{manageModal('')}}style={[{width: 28, height: 28, borderRadius: 15,alignItems: 'center', justifyContent: 'center'
+        <TouchableOpacity onPress={()=>{manageModal('')}}style={[{width: 30, height: 30, borderRadius: 15,alignItems: 'center', justifyContent: 'center'
         ,position: 'absolute', marginTop: 70, start: 75, backgroundColor: 'white'}]}> 
         <Image resizeMode="cover" style={[styles.camera, {alignSelf: 'center'}]} source={ImagesAssets.camera} />
         </TouchableOpacity>
@@ -184,11 +184,11 @@ const Profile = ({ navigation }) => {
         paddingVertical: 20,justifyContent: 'center', borderRadius: 20, flexDirection: 'row'}}>
        <TouchableOpacity onPress={()=>{manageModal('camera')}} style={{alignItems: 'center', justifyContent: 'center', flex: 0.5}}>
         <Image style={{width: 40, height: 40, tintColor: '#DB3022'}} source={ImagesAssets.camera}/>
-        <Text style={{fontFamily: 'Urbanist-Bold', color: 'grey'}}>Camera</Text>
+        <Text style={{fontFamily: 'Urbanist-Bold', color: 'grey', marginTop: 10}}>Camera</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>{manageModal('gallery')}} style={{alignItems: 'center', justifyContent: 'center', flex: 0.5}}>
         <Image style={{width: 40, height: 40,tintColor: '#DB3022'}} source={ImagesAssets.gallery}/>
-        <Text style={{fontFamily: 'Urbanist-Bold', color: 'grey'}}>Gallery</Text>
+        <Text style={{fontFamily: 'Urbanist-Bold', color: 'grey', marginTop: 10}}>Gallery</Text>
         </TouchableOpacity>
        </View>
       </Modal>
