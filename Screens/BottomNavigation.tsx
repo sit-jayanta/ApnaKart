@@ -22,6 +22,7 @@ import  CategoryIcon from 'react-native-vector-icons/MaterialIcons';
 import  HomeIcon from 'react-native-vector-icons/Entypo';
 import  LikeIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import  UserIcon from 'react-native-vector-icons/FontAwesome5';
+import Checkout from './Checkout';
 
 const Stack = createNativeStackNavigator();
 
@@ -95,6 +96,32 @@ function ProfileStackNavigator({navigation, route}) {
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="ItemDetails" component={ItemDetails} />
+    </Stack.Navigator>
+  );
+}
+
+function CartStackNavigator({navigation, route}){
+  const[routeName , updateRoute] = useState<any>('');
+  React.useLayoutEffect(()=> {
+    updateRoute(getFocusedRouteNameFromRoute(route));
+    if(routeName === 'Checkout'){
+      navigation.setOptions({ tabBarStyle: { display: 'none'}, headerStyle : { fontFamily: 'Urbanist-Bold',
+        fontSize: 25,
+        color: '#DB3022',
+        backgroundColor: '#DB3022',
+      } });
+    }else {
+      navigation.setOptions({  tabBarStyle: { display: 'flex', position: 'absolute',
+        height: 60,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20}});
+    }
+  },[navigation, routeName, route]);
+
+  return (
+    <Stack.Navigator screenOptions={ routeName === 'Cart' ?  {headerShown: false} : routeName === undefined ?  {headerShown: false} : {headerShown: true , headerTitleAlign: 'center',}}>
+      <Stack.Screen name="Cart" component={Cart} />
+      <Stack.Screen name="Checkout" component={Checkout} />
     </Stack.Navigator>
   );
 }
@@ -178,22 +205,8 @@ const BottomNavigation = ({navigation}) => {
               </View>
           ),
       }} />
-      <Tab.Screen name="Cart" component={Cart} options={{
-          tabBarLabel: 'Cart',
-          title: 'Cart',
-          headerTitleAlign: 'center',
-          headerTitleStyle: {
-              fontFamily: 'Urbanist-Bold',
-              fontSize: 25,
-          },
-          headerLeft: () => (
-              <TouchableOpacity onPress={() => Alert.alert('Header Left Icon Pressed!')}>
-                <Image
-                  source={require('../assets/icons/icon.png')}
-                  style={{ width: 25, height: 25, marginLeft: 15 }}
-                />
-              </TouchableOpacity>
-            ),
+      <Tab.Screen name="CartStackNavigator" component={CartStackNavigator} options={{
+          headerShown : false,
           tabBarIcon: ({ focused }) => (
             <View style={{flex: 1,width: 40,justifyContent: 'center', alignItems: 'center'}}>
                    <HomeIcon name="shopping-cart" size={focused ? 30 : 24} color={focused ? '#DB3022' : '#9B9B9B'} />

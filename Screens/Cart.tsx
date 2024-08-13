@@ -8,7 +8,7 @@ import { reduceQuantity, increaseQuantity, removeCart } from '../src/counterSlic
 import { ImagesAssets } from '../assets/images/ImageAssets';
 import { GestureHandlerRootView, Swipeable } from 'react-native-gesture-handler';
 
-const Cart = () => {
+const Cart = ({navigation}) => {
   const [products, updateProducts] = useState<any>();
   const [itemID, updateitemID] = useState<any>();
   const [deleteItem, updateDelete] = useState(false);
@@ -154,7 +154,7 @@ const Cart = () => {
           </View>
         </Swipeable>
     )} />
-    <TouchableOpacity style={{backgroundColor: '#DB3022', marginBottom: 70, marginHorizontal: 10,borderRadius: 10, elevation: 10, alignItems: 'center', justifyContent: 'center'}}>
+    <TouchableOpacity onPress={()=> navigation.navigate('Checkout')} style={{backgroundColor: '#DB3022', marginBottom: 70, marginHorizontal: 10,borderRadius: 10, elevation: 10, alignItems: 'center', justifyContent: 'center'}}>
       <Text style={{marginVertical: 15, color: 'white', fontFamily: 'Urbanist-Medium'}}>Check Out</Text>
     </TouchableOpacity>
      {deleteItem && (

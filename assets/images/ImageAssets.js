@@ -32,4 +32,6 @@ export const ImagesAssets = {
   minus: require('./minus.png'),
   camera : require('../icons/diaphragm.png'),
   gallery : require('../icons/gallery.png'),
+  card : require('../icons/card.png'),
+  
 };

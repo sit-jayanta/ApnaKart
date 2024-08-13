@@ -282,14 +282,7 @@ const ItemDetails = ({route, navigation}) => {
             {product?.brand}
           </Text>
           <Text
-            style={{
-              position: 'absolute',
-              end: 15,
-              color: 'black',
-              fontFamily: 'Urbanist-Bold',
-              fontSize: 27,
-              marginTop: 10,
-            }}>
+            style={styles.price}>
             ${product?.price}
           </Text>
         </View>
@@ -350,15 +343,7 @@ const ItemDetails = ({route, navigation}) => {
               ))}
             </View>
             <View
-              style={{
-                paddingHorizontal: 10,
-                paddingVertical: 15,
-                flexDirection: 'row',
-                marginTop: 20,
-                borderTopColor: 'grey',
-                borderBottomColor: 'grey',
-                borderWidth: 0.5,
-              }}>
+              style={styles.sizeInfo}>
               <Text style={[styles.text, {}]}>Size info</Text>
               <Image
                 style={{
@@ -375,7 +360,7 @@ const ItemDetails = ({route, navigation}) => {
         </RBSheet>
         <RBSheet ref={colorRBSheet} draggable dragOnContent height={350}>
           <View style={{flexDirection: 'column'}}>
-            {color?.map(item => (
+            {color?.map( item => (
               <TouchableOpacity
                 key={item.id}
                 style={[
@@ -393,27 +378,16 @@ const ItemDetails = ({route, navigation}) => {
                   {item.name}
                 </Text>
                 <Text
-                  style={{
-                    position: 'absolute',
-                    end: 20,
-                    backgroundColor: item.color,
-                    paddingVertical: 10,
-                    paddingHorizontal: 40,
-                    alignSelf: 'center',
-                    borderRadius: 4,
-                  }}
+                  style={[styles.line,{ backgroundColor: item.color}]}
                 />
               </TouchableOpacity>
             ))}
           </View>
         </RBSheet>
         <Text
-          style={{
-            fontFamily: 'Urbanist-ExtraBold',
-            color: 'black',
-            fontSize: 30,
-            marginStart: 15,
-          }}>
+          style={
+            styles.text1
+          }>
           Ratings & Reviews
         </Text>
         <View style={{flexDirection: 'row', flex: 1, paddingBottom: 20}}>
@@ -757,6 +731,37 @@ const styles = StyleSheet.create({
     fontFamily: 'Urbanist-ExtraBold',
     fontSize: 17,
     color: 'black',
+  },
+  text1: {
+    fontFamily: 'Urbanist-ExtraBold',
+            color: 'black',
+            fontSize: 30,
+            marginStart: 15,
+  },
+  line : {
+    position: 'absolute',
+    end: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    alignSelf: 'center',
+    borderRadius: 4,
+  },
+  sizeInfo : {
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+    flexDirection: 'row',
+    marginTop: 20,
+    borderTopColor: 'grey',
+    borderBottomColor: 'grey',
+    borderWidth: 0.5,
+  },
+  price: {
+    position: 'absolute',
+    end: 15,
+    color: 'black',
+    fontFamily: 'Urbanist-Bold',
+    fontSize: 27,
+    marginTop: 10,
   },
 });
 
