@@ -552,12 +552,14 @@ const ItemDetails = ({route, navigation}) => {
             styles.animated,
             bagAnimatedStyle,
           ]}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('CartStackNavigator')}}>
           <Image
             source={require('../assets/icons/bag.png')}
             style={
               styles.bag_icon
             }
           />
+          </TouchableOpacity>
         </Animated.View>
         <TouchableOpacity
           activeOpacity={sizeSelected && colorSelected ? 0.3 : 1}

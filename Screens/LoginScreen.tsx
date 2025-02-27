@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
-import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity, Alert } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React, {  useState } from 'react';
 import { } from 'react-native-safe-area-context';
 import { ImagesAssets } from '../assets/images/ImageAssets';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -10,7 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import LoginSuccessful from '../components/LoginSuccessful';
 import LoadingIndicater from '../components/LoadingIndicater';
 
-const LoginScreen = ({ navigation, route }) => {
+const LoginScreen = ({ navigation }: any) => {
 
     const [email, updateEmail] = useState('');
     const [pwd, updatePwd] = useState('');
