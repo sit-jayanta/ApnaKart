@@ -55,7 +55,13 @@ const Profile = ({ navigation }) => {
         skipBackup: true
       }
     };
-    launchImageLibrary(options, response =>{
+    launchImageL
+    
+    
+    
+    
+    
+    ibrary(options, response =>{
       if (response.didCancel) {
         console.log('User cancelled photo picker');
         Alert.alert('You did not select any image');

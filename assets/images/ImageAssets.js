@@ -33,5 +33,8 @@ export const ImagesAssets = {
   camera : require('../icons/diaphragm.png'),
   gallery : require('../icons/gallery.png'),
   card : require('../icons/card.png'),
+  fedex : require('../images/fedex.png'),
+  usps : require('../images/usps.png'),
+  dhl : require('../images/dhl.png')
   
 };
